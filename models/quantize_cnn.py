@@ -297,6 +297,7 @@ class QuantizeReset(nn.Module):
         
         return x_d, commit_loss, perplexity
 
+    
 class QuantizeEMA(nn.Module):
     def __init__(self, nb_code, code_dim, args):
         super().__init__()
