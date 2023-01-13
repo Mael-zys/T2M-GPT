@@ -6,7 +6,7 @@ Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual D
 
 
 <p align="center">
-<img src="img/Teaser.png" width="800px" alt="teaser">
+<img src="img/Teaser.png" width="600px" alt="teaser">
 </p>
 
 If our project is helpful for your research, please consider citing :
