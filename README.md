@@ -26,7 +26,7 @@ If our project is helpful for your research, please consider citing :
 * [3. Quick Start](#3-quick-start)
 * [4. Train](#4-train)
 * [5. Evaluation](#5-evaluation)
-* [6. Motion Render](#6-motion-render)
+* [6. SMPL Mesh Rendering](#6-smpl-mesh-rendering)
 * [7. Acknowledgement](#7-acknowledgement)
 * [8. ChangLog](#8-changlog)
 
@@ -137,7 +137,7 @@ bash dataset/prepare/download_model.sh
 ```
 
 
-### 2.6. Render motion (optional)
+### 2.6. Render SMPL mesh (optional)
 
 If you want to render the generated motion, you need to install:
 
@@ -301,11 +301,11 @@ python3 GPT_eval_multi.py  \
 </details>
 
 
-## 6. Mesh Rendering 
+## 6. SMPL Mesh Rendering 
 
 <details>
 <summary>
-Mesh Rendering 
+SMPL Mesh Rendering 
 </summary>
 
 You should input the npy folder address and the motion names. Here is an example:
