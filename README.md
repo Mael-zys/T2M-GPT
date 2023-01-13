@@ -5,7 +5,9 @@ Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual D
 [[Project Page]](https://mael-zys.github.io/T2M-GPT/) [Paper] [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
 
 
-![teaser](img/Teaser.png)
+<p align="center">
+<img src="img/Teaser.png" width="800px" alt="teaser">
+</p>
 
 If our project is helpful for your research, please consider citing :
 ``` 
@@ -115,7 +117,7 @@ Take HumanML3D for an example, the file directory should look like this:
 ├── val.txt
 ├── test.txt
 ├── train_val.txt
-└──all.txt
+└── all.txt
 ```
 
 
@@ -299,11 +301,11 @@ python3 GPT_eval_multi.py  \
 </details>
 
 
-## 6. Motion Render 
+## 6. Mesh Rendering 
 
 <details>
 <summary>
-Motion Render
+Mesh Rendering 
 </summary>
 
 You should input the npy folder address and the motion names. Here is an example:
