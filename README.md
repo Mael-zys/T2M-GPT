@@ -2,7 +2,7 @@
 Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations"
 
 
-[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://drive.google.com/file/d/1PtjJLZakq5d6s7K6q-wdtdLAE11qJVFO/view?usp=share_link) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
+[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://github.com/Mael-zys/T2M-GPT/blob/main/T2M-GPT.pdf) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
 
 
 <p align="center">
