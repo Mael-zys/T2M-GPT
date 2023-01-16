@@ -12,9 +12,9 @@ Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual D
 If our project is helpful for your research, please consider citing :
 ``` 
 @article{zhang2023generating,
-  title={{T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations}},
+  title={T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations},
   author={Zhang, Jianrong and Zhang, Yangsong and Cun, Xiaodong and Huang, Shaoli and Zhang, Yong and Zhao, Hongwei and Lu, Hongtao and Shen, Xi},
-  booktitle={arXiv},
+  journal={arXiv},
   year={2023},
 }
 ```
