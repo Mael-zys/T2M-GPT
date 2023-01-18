@@ -1,16 +1,16 @@
 # T2M-GPT
+
 Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations"
 
-
-[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://github.com/Mael-zys/T2M-GPT/blob/main/T2M-GPT.pdf) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
-
+[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://arxiv.org/abs/2301.06052) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
 
 <p align="center">
 <img src="img/Teaser.png" width="600px" alt="teaser">
 </p>
 
 If our project is helpful for your research, please consider citing :
-``` 
+
+```
 @article{zhang2023generating,
   title={T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations},
   author={Zhang, Jianrong and Zhang, Yangsong and Cun, Xiaodong and Huang, Shaoli and Zhang, Yong and Zhao, Hongwei and Lu, Hongtao and Shen, Xi},
@@ -19,8 +19,8 @@ If our project is helpful for your research, please consider citing :
 }
 ```
 
-
 ## Table of Content
+
 * [1. Visual Results](#1-visual-results)
 * [2. Installation](#2-installation)
 * [3. Quick Start](#3-quick-start)
@@ -29,9 +29,6 @@ If our project is helpful for your research, please consider citing :
 * [6. SMPL Mesh Rendering](#6-smpl-mesh-rendering)
 * [7. Acknowledgement](#7-acknowledgement)
 * [8. ChangLog](#8-changlog)
-
-
-
 
 ## 1. Visual Results (More results can be found in our [project page](https://mael-zys.github.io/T2M-GPT/))
 
@@ -49,40 +46,10 @@ If our project is helpful for your research, please consider citing :
     <th><u><a href="https://mingyuan-zhang.github.io/projects/MotionDiffuse.html"><nobr>MotionDiffuse</nobr> </a></u></th>
     <th>Ours</th>
   </tr>
-  
-  <tr>
-    <td><img src="img/002103_gt_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/002103_pred_t2m_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/002103_pred_mdm_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/002103_pred_MotionDiffuse_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/002103_pred_16.gif" width="140px" alt="gif"></td>
-  </tr>
 
-  <tr>
-    <th colspan="5">Text: A man rises from the ground, walks in a circle and sits back down on the ground.</th>
-  </tr>
-  <tr>
-    <th>GT</th>
-    <th><u><a href="https://ericguo5513.github.io/text-to-motion/"><nobr>T2M</nobr> </a></u></th>
-    <th><u><a href="https://guytevet.github.io/mdm-page/"><nobr>MDM</nobr> </a></u></th>
-    <th><u><a href="https://mingyuan-zhang.github.io/projects/MotionDiffuse.html"><nobr>MotionDiffuse</nobr> </a></u></th>
-    <th>Ours</th>
-  </tr>
-  
-  <tr>
-    <td><img src="img/000066_gt_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/000066_pred_t2m_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/000066_pred_mdm_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/000066_pred_MotionDiffuse_16.gif" width="140px" alt="gif"></td>
-    <td><img src="img/000066_pred_16.gif" width="140px" alt="gif"></td>
-  </tr>
-</table>
-</p>
- 
 ## 2. Installation
 
 ### 2.1. Environment
-
 
 Our model can be learnt in a **single GPU V100-32G**
 
@@ -93,20 +60,18 @@ conda activate T2M-GPT
 
 The code was tested on Python 3.8 and PyTorch 1.8.1.
 
-
 ### 2.2. Dependencies
 
 ```bash
 bash dataset/prepare/download_glove.sh
 ```
 
-
 ### 2.3. Datasets
 
+We are using two 3D human motion-language dataset: HumanML3D and KIT-ML. For both datasets, you could find the details as well as download link [[here]](https://github.com/EricGuo5513/HumanML3D).
 
-We are using two 3D human motion-language dataset: HumanML3D and KIT-ML. For both datasets, you could find the details as well as download link [[here]](https://github.com/EricGuo5513/HumanML3D).   
+Take HumanML3D for an example, the file directory should look like this:
 
-Take HumanML3D for an example, the file directory should look like this:  
 ```
 ./dataset/HumanML3D/
 ├── new_joint_vecs/
@@ -120,7 +85,6 @@ Take HumanML3D for an example, the file directory should look like this:
 └── all.txt
 ```
 
-
 ### 2.4. Motion & text feature extractors:
 
 We use the same extractors provided by [t2m](https://github.com/EricGuo5513/text-to-motion) to evaluate our generated motions. Please download the extractors.
@@ -129,13 +93,13 @@ We use the same extractors provided by [t2m](https://github.com/EricGuo5513/text
 bash dataset/prepare/download_extractor.sh
 ```
 
-### 2.5. Pre-trained models 
+### 2.5. Pre-trained models
 
 The pretrained model files will be stored in the 'pretrained' folder:
+
 ```bash
 bash dataset/prepare/download_model.sh
 ```
-
 
 ### 2.6. Render SMPL mesh (optional)
 
@@ -148,8 +112,6 @@ conda install h5py
 conda install -c conda-forge shapely pyrender trimesh mapbox_earcut
 ```
 
-
-
 ## 3. Quick Start
 
 A quick start guide of how to use our code is available in [demo.ipynb](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing)
@@ -158,12 +120,11 @@ A quick start guide of how to use our code is available in [demo.ipynb](https://
 <img src="img/demo.png" width="400px" alt="demo">
 </p>
 
-
 ## 4. Train
 
 Note that, for kit dataset, just need to set '--dataname kit'.
 
-### 4.1. VQ-VAE 
+### 4.1. VQ-VAE
 
 The results are saved in the folder output.
 
@@ -193,7 +154,7 @@ python3 train_vq.py \
 
 </details>
 
-### 4.2. GPT 
+### 4.2. GPT
 
 The results are saved in the folder output.
 
@@ -231,9 +192,10 @@ python3 train_t2m_trans.py  \
 
 </details>
 
-## 5. Evaluation 
+## 5. Evaluation
 
-### 5.1. VQ-VAE 
+### 5.1. VQ-VAE
+
 <details>
 <summary>
 VQ eval
@@ -300,8 +262,7 @@ python3 GPT_eval_multi.py  \
 
 </details>
 
-
-## 6. SMPL Mesh Rendering 
+## 6. SMPL Mesh Rendering
 
 <details>
 <summary>
@@ -318,11 +279,9 @@ python3 render_final.py --filedir output/TEST_GPT/ --motion-list 000019 005485
 
 ### 7. Acknowledgement
 
-We appreciate helps from :  
+We appreciate helps from :
 
 * public code like [text-to-motion](https://github.com/EricGuo5513/text-to-motion), [TM2T](https://github.com/EricGuo5513/TM2T), [MDM](https://github.com/GuyTevet/motion-diffusion-model), [MotionDiffuse](https://github.com/mingyuan-zhang/MotionDiffuse) etc.
-* <a href='https://mathis.petrovich.fr/'>Mathis Petrovich</a>, <a href='https://dulucas.github.io/'>Yuming Du</a>, <a href='https://github.com/yingyichen-cyy'>Yingyi Chen</a>, <a href='https://dexiong.me/'>Dexiong Chen</a> and <a href='https://xuelin-chen.github.io/'>Xuelin Chen</a> for inspiring discussions and valuable feedback.
+* `<a href='https://mathis.petrovich.fr/'>`Mathis Petrovich`</a>`, `<a href='https://dulucas.github.io/'>`Yuming Du`</a>`, `<a href='https://github.com/yingyichen-cyy'>`Yingyi Chen`</a>`, `<a href='https://dexiong.me/'>`Dexiong Chen`</a>` and `<a href='https://xuelin-chen.github.io/'>`Xuelin Chen`</a>` for inspiring discussions and valuable feedback.
 
 ### 8. ChangLog
-
-
