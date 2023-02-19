@@ -2,7 +2,7 @@
 Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations"
 
 
-[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://arxiv.org/abs/2301.06052) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing) [[HuggingFace Demo]](https://huggingface.co/vumichien/T2M-GPT) [[Space Demo]](https://huggingface.co/spaces/vumichien/generate_human_motion)
+[[Project Page]](https://mael-zys.github.io/T2M-GPT/) [[Paper]](https://arxiv.org/abs/2301.06052) [[Notebook Demo]](https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing) [[HuggingFace]](https://huggingface.co/vumichien/T2M-GPT) [[Space Demo]](https://huggingface.co/spaces/vumichien/generate_human_motion)
 
 
 <p align="center">
@@ -322,6 +322,8 @@ We appreciate helps from :
 
 * public code like [text-to-motion](https://github.com/EricGuo5513/text-to-motion), [TM2T](https://github.com/EricGuo5513/TM2T), [MDM](https://github.com/GuyTevet/motion-diffusion-model), [MotionDiffuse](https://github.com/mingyuan-zhang/MotionDiffuse) etc.
 * <a href='https://mathis.petrovich.fr/'>Mathis Petrovich</a>, <a href='https://dulucas.github.io/'>Yuming Du</a>, <a href='https://github.com/yingyichen-cyy'>Yingyi Chen</a>, <a href='https://dexiong.me/'>Dexiong Chen</a> and <a href='https://xuelin-chen.github.io/'>Xuelin Chen</a> for inspiring discussions and valuable feedback.
+* <a href='https://github.com/vumichien'>Minh Chien Vu</a> for the hugging face space demo.
 
 ### 8. ChangLog
 
+* 2023/02/19 add the hugging face space demo for both skelton and SMPL mesh visualization.

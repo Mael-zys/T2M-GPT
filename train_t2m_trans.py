@@ -48,7 +48,7 @@ wrapper_opt = get_opt(dataset_opt_path, torch.device('cuda'))
 eval_wrapper = EvaluatorModelWrapper(wrapper_opt)
 
 ##### ---- Network ---- #####
-clip_model, clip_preprocess = clip.load("ViT-B/32", device=torch.device('cuda'), jit=False, download_root='/apdcephfs_cq2/share_1290939/maelyszhang/.cache/clip')  # Must set jit=False for training
+clip_model, clip_preprocess = clip.load("ViT-B/32", device=torch.device('cuda'), jit=False)  # Must set jit=False for training
 clip.model.convert_weights(clip_model)  # Actually this line is unnecessary since clip by default already on float16
 clip_model.eval()
 for p in clip_model.parameters():
