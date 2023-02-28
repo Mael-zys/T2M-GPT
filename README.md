@@ -1,4 +1,4 @@
-# T2M-GPT
+# (CVPR 2023) T2M-GPT
 Pytorch implementation of paper "T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations"
 
 
