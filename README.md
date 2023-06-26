@@ -295,7 +295,7 @@ python3 GPT_eval_multi.py  \
 --pkeep 0.5 \
 --dilation-growth-rate 3 \
 --vq-act relu \
---resume-gpt output/GPT/net_best_fid.pth
+--resume-pth output/GPT/net_best_fid.pth
 ```
 
 </details>
