@@ -2,7 +2,7 @@ rm -rf checkpoints
 mkdir checkpoints
 cd checkpoints
 echo -e "Downloading extractors"
-gdown --fuzzy https://drive.google.com/file/d/1o7RTDQcToJjTm9_mNWTyzvZvjTWpZfug/view
+gdown --fuzzy https://drive.google.com/file/d/1FIiqtkt4F-GVWmnBgtZnv9W3cPWS-oM-/view
 gdown --fuzzy https://drive.google.com/file/d/1KNU8CsMAnxFrwopKBBkC8jEULGLPBHQp/view
 
 
